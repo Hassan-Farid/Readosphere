@@ -1,0 +1,86 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>
+        Readosphere
+    </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'books/style/main.css' %}">
+    <body>
+        <div class=" bg-image-container ">
+            <header class="header-container ">
+                <nav class="nav-container ">
+                    <a href= "{% url 'books:index' %}">Home</a>
+                    <a href="newloginpage.html">Login</a>
+                    <a href="newregisterpage.html">Register</a>
+                </nav>
+                <div class="title-container ">
+                    <h1>Readosphere</h1>
+                    <div class="title-container-sub ">
+                        <h4>Looking for Quality Books to Read!!?</h4>
+                        <p>You have come to the right place! Readosphere is an online book catalog system that allows its users to share and read high quality books on almost every genre!</p>
+                    </div>
+                </div>
+            </header>
+            <main class="main-container ">
+                <div class='border-container'>
+                    <section>
+                        <h3> Search Books: </h3>
+                        <p> Search the books you want to read review on by entering one of the options given below:</p>
+                    </section>
+                    <form action="{% url 'books:book-search-list' %}" method="get" id="form">
+                        <input name="q" type="text" placeholder="Search...">
+                        <button type="submit" class='button-container '>Search</button>
+                    </form>
+                </div>
+                <div class="border-container">
+                    <h2> Recommended Books </h2>
+                    <div>
+                        <div class="book-container">
+                            <figure class='img-container '>
+                                <img src="/readosphere{{ top_book1.cover.url }}" alt="Book Cover Not Loaded">
+                                <figcaption><strong>Book Name: </strong> {{top_book1.title}} <a href="/readosphere/books/{{top_book1.id}}"> View Book Details</a> </figcaption>
+                            </figure>
+                            <figure class='img-container '>
+                                <img src="/readosphere{{ top_book2.cover.url }}" alt="Book Cover Not Loaded">
+                                <figcaption><strong>Book Name: </strong> {{top_book2.title}} <a href="/readosphere/books/{{top_book2.id}}"> View Book Details</a> </figcaption>
+                                <br>
+                            </figure>
+                        </div>
+                    </div>
+                    <button type=submit value="more books" class="book-button"><a href= "{% url 'books:book-top-list' %}">Click Here For More Books</a>></button>
+
+                </div>
+                <div class="border-container">
+                    <h2> Recently updated Books </h2>
+                    <div>
+                        <div class="book-container">
+
+                            <figure class='img-container '>
+                                <img src="/readosphere{{ recent_book1.cover.url }}" alt="Book Cover Not Loaded">
+                                <figcaption><strong>Book Name: </strong> {{recent_book1.title}} <a href="/readosphere/books/{{recent_book1.id}}"> View Book Details</a> </figcaption>
+                            </figure>
+                            <figure class='img-container '>
+                                <img src="/readosphere{{ recent_book2.cover.url }}" alt="Book Cover Not Loaded">
+                                <figcaption><strong>Book Name: </strong> {{recent_book1.title}} <a href="/readosphere/books/{{recent_book2.id}}"> View Book Details</a> </figcaption>
+
+                            </figure>
+
+                        </div>
+                    </div>
+
+                    <button type=submit value="more books" class="book-button"><a href= "{% url 'books:book-recent-list' %}">Click Here For More Books</a>></button>
+                    
+                </div>
+            </main>
+            <footer class="footer-container">
+                <p>@Copyrights 2020 Readosphere. All rights reserved</p>
+            </footer>
+        </div>
+    </body>
+
+ 

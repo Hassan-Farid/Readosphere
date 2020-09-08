@@ -1,0 +1,339 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100px;
+    background-size: cover;
+    font: x-large;
+    overflow-x: hidden;
+}
+
+.total-bg-container{
+    background-image: url("/static/books/style/crystal.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 120vh;
+}
+
+.bg-image-container {
+    background-image: url("/static/books/style/crystal.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 120vh;
+    display: flex;
+    flex-direction: column;
+    color: rgb(61, 61, 61);
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-container {
+    background-color: rgb(61, 61, 61);
+    font-size: large;
+    align-self: flex-end;
+    padding: 5px 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.nav-container a {
+    color: white;
+    margin: 0px;
+    text-decoration: none;
+    padding: 7px 10px;
+}
+
+.nav-container a:hover {
+    background-color: rgba(248, 247, 216, 0.3);
+}
+
+.title-container {
+    margin-left: 2%;
+    font-size: large;
+}
+
+.title-container-sub {
+    margin-left: 2%;
+}
+
+.title-container-sub p {
+    max-width: 100%;
+    flex-wrap: wrap;
+    font-size: 20px;
+}
+
+.border-container {
+    border-width: 5px;
+    border-style: double;
+    margin-top: 1%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    padding: 5px;
+    background-color: rgba(248, 247, 216, 0.3);
+}
+
+.border-container:hover {
+    transform: scale(1.05, 1.05);
+    -webkit-transform: scale(1.05, 1.05);
+    -moz-transform: scale(1.05, 1.05);
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    font-size: medium;
+}
+
+.book-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.img-container img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.book-button{
+    bottom: 2%;
+}
+
+.book-button a{
+    text-decoration: none;
+    color: rgb(61, 61, 61);
+}
+
+.list-bg-container{
+        background-image: url("/static/books/style/crystal.jpg");
+        background-repeat: repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        color: rgb(61, 61, 61);
+}
+
+.list-enabled{
+    display: flex;
+    flex-direction: row;
+}
+
+.list-enabled:hover{
+    transform: scale(1.00, 1.00);
+    -webkit-transform: scale(1.00, 1.00);
+    -moz-transform: scale(1.00, 1.00);
+}
+
+.list-enabled p{
+    margin-right: 2%;
+}
+
+.list-enabled img{
+    width: 25%;
+    height: 25%;
+}
+
+.footer-container {
+    background-color: rgb(61, 61, 61);
+    color: white;
+    padding-top: 0px;
+    font-size: medium;
+    flex: 1;
+}
+
+
+/*
+.page-title {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.section-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-container h1 {
+    font-size: xx-large;
+}
+
+.section-container h2 {
+    font-size: x-large;
+}
+
+.section-container p {
+    max-width: 50%;
+    word-wrap: break-word;
+}
+
+.nav-container>a {
+    margin-left: 5px;
+    color: #000000;
+}
+
+.nav-container>a:hover {
+    color: darkblue;
+}
+
+#search-section {
+    position: absolute;
+    margin-top: 15px;
+    font-size: larger;
+    max-width: 25%;
+    word-wrap: break-word;
+    padding: 5px;
+}
+
+.border-container {
+    border-width: 5px;
+    border-style: double;
+}
+
+
+h1,
+h2,
+h3 {
+    color: #8f580a;
+}
+
+
+a {
+    color: #e0ad3e;
+}
+
+a:hover {
+    color: #8f580a;
+}
+
+#page-head {
+    background-image: linear-gradient(#e0ad3e, #49330B);
+}
+
+#page-title {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+#page-title img {
+    width: 10%;
+    height: 20%;
+}
+
+#page-title h1 {
+    font-size: 50px;
+}
+
+nav {
+    background-image: cross-fade(#E2911C, #E0AD3E);
+    opacity: 1;
+    color: #8f580a;
+    padding: 0px;
+    width: inherit;
+    height: max-content;
+}
+
+nav>a {
+    margin: 2px;
+    padding: 2px;
+}
+
+.page-section {
+    display: flex;
+    align-items: flex-start;
+    font-size: x-large;
+    margin: 40px 0px;
+}
+
+.page-section #about {
+    background-image: linear-gradient(#e0ad3e, #49330B);
+    padding: 10px;
+    margin: 5px;
+    margin-top: 15px;
+    margin-right: 5%;
+    flex: 2;
+}
+
+.page-section #about:hover {
+    flex: 3;
+}
+
+.page-section #search {
+    background-image: linear-gradient(#e0ad3e, #49330B);
+    padding: 10px;
+    margin: 5px 0px;
+    margin-top: 15px;
+    flex: 1;
+}
+
+#user-section {
+    flex-direction: column;
+}
+
+.book-section {
+    background-image: linear-gradient(#e0ad3e, #49330B);
+    margin: 5px;
+    padding: 5px;
+}
+
+.img-container {
+    font-size: large;
+    display: flex;
+    padding: 5px;
+    flex-direction: column;
+    background-image: linear-gradient(#8f580a, #49330B);
+    background-attachment: fixed;
+}
+
+.img-container img {
+    flex: 1;
+    width: 50%;
+    height: 50%;
+}
+
+.img-container figcaption {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    flex: 2;
+}
+
+.img-container figcaption strong {
+    font-size: large;
+}
+
+.img-container figcaption a {
+    margin-top: 15px
+}
+
+footer {
+    background-color: #49330B;
+    font-size: large;
+    font-style: italic;
+}
+
+.border-container {
+    border-color: #8f580a;
+    border-style: solid;
+    border-width: 5px;
+}
+
+.button-container,
+.input-container {
+    border: #8f580a solid 2px;
+    border-radius: 5px;
+    background-color: #49330B;
+    color: #e0ad3e;
+}
+
+::placeholder {
+    color: #e0ad3e;
+    opacity: 0.5;
+}*/

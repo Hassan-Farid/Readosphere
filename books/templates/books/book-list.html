@@ -1,0 +1,42 @@
+{% load static %}
+<html>
+<head>
+    <title>
+        Books
+    </title>
+    <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
+    <link rel="stylesheet" href="{% static 'books/style/main.css' %}">
+</head>
+
+<body>
+    <div class="total-bg-container">
+    <div class="list-bg-container">
+        <header class="header-container ">
+            <nav class="nav-container ">
+                <a href="{% url 'books:index' %}">Home</a>
+                <a href="newloginpage.html">Login</a>
+                <a href="newregisterpage.html">Register</a>
+            </nav>
+        </header>
+        <div>
+            <h2 style="text-align: center;">Books List</h2>
+        </div>
+        <br>
+        {% if books %} 
+        <div>
+            {% for book in books %} 
+            <div class= "border-container list-enabled">
+                <p><strong>Title: </strong> {{book.title}}</p>
+                <p><strong>Genre: </strong> {{book.genre}}</p>
+                <p><strong>Language: </strong> {{book.language}}</p>
+                <p><strong>View Details: </strong> <a href="/readosphere/books/{{book.id}}">View Book Details</a></p>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %} 
+        <p>No record was found </p> 
+        {% endif %}
+    </div>
+    </div>
+    </body>
+</html>

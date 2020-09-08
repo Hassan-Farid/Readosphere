@@ -1,0 +1,71 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>
+            Books
+        </title>
+        <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
+        <link rel="stylesheet" href="{% static 'books/style/detail.css' %}">
+    </head>    
+    <body>
+    {% if book %}
+    <div class=" bg-image-container ">
+    <header class="header-container ">
+        <nav class="nav-container ">
+            <a href="{% url 'books:index' %}">Home</a>
+            <a href="newloginpage.html">Login</a>
+            <a href="newregisterpage.html">Register</a>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <h2>
+                Read Book Details
+            </h2>
+        </div>
+        <div>
+            <div class='border-container'>
+                <img height="400px" width="300px" src="/readosphere{{ book.cover.url }}" alt="Book Cover Not Loaded">
+                <div class='border-container book-container'>
+
+                    <p><strong>Title: </strong> {{book.title}}</p>
+                    <p><strong>ISBN ID: </strong> {{book.isbn}}</p>
+                    <p><strong>Edition No.: </strong> {{book.edition}}</p>
+                    <p><strong>Genre: </strong> {{book.genre}}</p>
+                    <p><strong>Language: </strong> {{book.language}}</p>
+                </div>
+                <div class='detail-container'>
+                    <div class='border-container author-container'>
+                        <img src = "/readosphere{{ book.author.profile.url }}" alt="Author Image not Found">
+                        <div class="author-detail">
+                            <p><strong>Author: </strong>{{book.author.author_name}}</p>
+                            <p><strong>About the Author: </strong>{{book.author.author_info}}</p>
+                        </div>
+                    </div>
+                    <div class='border-container publisher-container'>
+                        <p><strong>Publisher: </strong>{{book.publisher.publisher_name}}</p>
+                        
+                    </div>
+                    <div class='border-container review-container'>
+                        <p><strong>Review: </strong> {{book.review}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </main>
+
+    <footer class="footer-container">
+        <p> @Copyrights Readosphere 2020. All rights reserved. </p>
+    </footer>
+</div>
+{% endif %}
+</body>
+
+</html>
